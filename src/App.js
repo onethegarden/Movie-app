@@ -1,29 +1,36 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
+import axios from 'axios';
 
 /*
 state
 React automatically is going excute render method function of my class component
+
+every time you call setState react going to call rerender function with new State
+
+construcor() when a component show up on the screen then, render()
+https//yts-proxy.now.sh/list_movies.json
+
 */
 class App extends React.Component{
-  state = {
-    count : 0
+  state={
+    isLoading : true,
+    movies: []
+  };
+  getMovies = async() =>{
+    const {
+      data:{
+        data:{movies}
+      }
+    } = axios.get("https//yts-proxy.now.sh/list_movies.json");
+    this.setState({movies:movies})
+  };
+  componentDidMount(){
+      this.getMovies();
   }
-  add =()=>{
-    console.log("add");
-  };
-  minus =()=>{
-    console.log("minus");
-  };
   render(){
-    return(
-      <div>
-        <h1>The number is  {this.state.count}</h1>
-        <button onClick={this.add}>add</button>
-        <button onClick={this.minus}>Minus</button>
-      </div>
-      );
+    const { isLoading } = this.state;
+    return <div>{isLoading? "Loading": "We are ready"} </div>;
+  
   }
 }
 
