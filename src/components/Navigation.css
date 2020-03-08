@@ -1,0 +1,18 @@
+.navigation{
+    background-color: white;
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+    margin-top:10px;
+
+}
+.nav{
+    margin:0 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color:black;
+}
+.nav:hover{
+    color:gray;
+    cursor: pointer;
+}
