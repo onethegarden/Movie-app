@@ -1,4 +1,14 @@
 
+
+.movies{
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    padding:50px;
+    padding-top:70px;
+    width:80%;
+    text-decoration: none;
+}
 .movies .movie{
     width : 45%;
     background-color: white;

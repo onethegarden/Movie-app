@@ -4,6 +4,7 @@ import About from './routes/About';
 import Home from './routes/Home';
 import Navigation from './components/Navigation';
 import Detail from './components/Detail';
+import "./components/Navigation.css";
 
 function App(){
   //exact means only rendering path
