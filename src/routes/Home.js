@@ -3,6 +3,13 @@ import axios from 'axios';
 import Movie from '../components/Movie';
 import "./Home.css";
 
+/*
+state
+React automatically is going excute render method function of my class component
+every time you call setState react going to call rerender function with new State
+construcor() when a component show up on the screen then, render()
+https//yts-proxy.now.sh/list_movies.json
+*/
 class Home extends React.Component{
   state={
     isLoading : true,
@@ -50,11 +57,3 @@ class Home extends React.Component{
 }
 
 export default Home;
-
-/*
-state
-React automatically is going excute render method function of my class component
-every time you call setState react going to call rerender function with new State
-construcor() when a component show up on the screen then, render()
-https//yts-proxy.now.sh/list_movies.json
-*/
