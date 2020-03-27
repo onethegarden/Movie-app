@@ -1,15 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import "./Navigation.css";
 
-function Naviation(){
+function Navigation(){
     //link has to be inside router
-    return (
-    <div className="navigation">
-        <Link className="nav" to="/">Home</Link>
-        <span> | </span>
-        <Link className="nav" to="/about">About</Link>
+  return (
+    <div className="nav">
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
     </div>
-    );
+  );
 }
 
-export default Naviation;
+export default Navigation;
